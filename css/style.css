@@ -1,0 +1,262 @@
+/* Styles globaux */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e1e;
+    color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #FFA500; /* Orange pastel */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar a.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFA500;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+}
+
+/* Hero section */
+.hero {
+    background-color: #333;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 36px;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+/* Container for the pages */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Section des annonces */
+.annonces-list {
+    margin-top: 30px;
+}
+
+.annonces-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.annonce-card {
+    background-color: #444;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px; /* Fixe la largeur des cartes */
+    height: 300px; /* Fixe la hauteur des cartes pour les rendre carrées */
+    text-align: center;
+    overflow: hidden; /* Empêche l'image de déborder */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute une ombre douce autour de la carte */
+    position: relative; /* Nécessaire pour positionner le texte et le bouton */
+    transition: transform 0.3s ease; /* Animation pour agrandir la carte au survol */
+}
+
+.annonce-card:hover {
+    transform: translateY(-5px); /* Effet de déplacement lors du survol */
+}
+
+.annonce-card img {
+    width: 100%;
+    height: 200px; /* Hauteur de l'image */
+    object-fit: cover; /* L'image couvre la zone sans déformation */
+    border-radius: 5px;
+    margin-bottom: 10px; /* Ajoute un espacement sous l'image */
+}
+
+.annonce-card h3 {
+    margin-bottom: 10px;
+    transition: transform 0.3s ease; /* Transition pour déplacer le texte */
+}
+
+.annonce-card p {
+    margin-bottom: 10px;
+    transition: transform 0.3s ease; /* Transition pour déplacer le texte */
+}
+
+.annonce-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #FFA500;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    opacity: 0; /* Initialement invisible */
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.3s ease;
+}
+
+.annonce-card:hover h3,
+.annonce-card:hover p {
+    transform: translateY(-25px); /* Déplace le texte vers le haut lors du survol */
+}
+
+.annonce-card:hover a {
+    opacity: 1; /* Affiche le bouton lors du survol */
+}
+
+.annonce-card a:hover {
+    background-color: #FF8C00; /* Orange foncé */
+}
+
+/* Page de connexion */
+#connexion-page {
+    background-color: #222;
+    padding: 50px 0;
+}
+
+.connexion-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.connexion-container h1 {
+    text-align: center;
+    color: #FFA500;
+    margin-bottom: 20px;
+}
+
+.connexion-container input[type="email"],
+.connexion-container input[type="password"],
+.connexion-container input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.connexion-container input[type="email"],
+.connexion-container input[type="password"] {
+    background-color: #444;
+    color: #fff;
+}
+
+.connexion-container input[type="submit"] {
+    background-color: #FFA500;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    font-size: 1.1rem;
+}
+
+.connexion-container input[type="submit"]:hover {
+    background-color: #FF8C00;
+}
+
+/* Page d'inscription */
+#inscription-page {
+    background-color: #222;
+    padding: 50px 0;
+}
+
+.inscription-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.inscription-container h1 {
+    text-align: center;
+    color: #FFA500;
+    margin-bottom: 20px;
+}
+
+.inscription-container input[type="email"],
+.inscription-container input[type="password"],
+.inscription-container input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.inscription-container input[type="email"],
+.inscription-container input[type="password"] {
+    background-color: #444;
+    color: #fff;
+}
+
+.inscription-container input[type="submit"] {
+    background-color: #FFA500;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    font-size: 1.1rem;
+}
+
+.inscription-container input[type="submit"]:hover {
+    background-color: #FF8C00;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
